@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calc.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.1.0/math.min.js" integrity="sha512-xQojvgv0dVk/nJeMyWw1ptUugxRWnLisjL1vjuWKhdSK0QW170IqvOsL2Z059lnISdXvciv0keu0q/GE9RmneQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="calcBloc">
+        <input type="text"  id="display" class="display" placeholder="0">
+        <div id="btnBloc">
+            <div class="btnRow btnRow0">
+                <div id="try">
+                    <label for="rad">rad</label><input type="radio" name="angle" id="rad" value="rad">
+                    <label for="deg">deg</label><input type="radio" name="angle" id="deg" value="deg">
+                    <label for="grad">grad</label><input type="radio" name="angle" id="grad" value="grad">
+                   </div>
+                   
+                <div>
+                    <input type="checkbox" name="second" id="second" class="m"><label for="second">2nd</label>
+                    <input type="checkbox" name="hyperbolic" id="hyperbolic" class = "m"><label for="hyperbolic">hyp</label>
+                </div>
+                <!-- 
+                    il reste les fonctionnalité suivantes:
+                    racine carre,sinus,cosisun,tangeante,inverse,factorielle
+                -->
+            </div>
+            <div class="btnRow btnRow1">
+                <button class="affBtn btn">7</button>
+                <button class="affBtn btn">8</button>
+                <button class="affBtn btn">9</button>
+                <button class="affBtn btn">/</button>
+                <button class="btn" id="log">log</button>
+                <button class="btn" id="fact">n!</button>
+                <button id='delete' class="btn">DEL</button>
+            </div>
+            <div class="btnRow btnRow2">
+                <button class="affBtn btn">4</button>
+                <button class="affBtn btn">5</button>
+                <button class="affBtn btn">6</button>
+                <button class="affBtn btn">*</button>
+                <button class="btn" id="ln">ln</button>
+                <button class="affBtn btn">(</button>
+                <button class="btn" id="sin" class="trig">sin</button>
+            </div>
+            <div class="btnRow btnRow3">
+                <button class="affBtn btn">1</button>
+                <button class="affBtn btn">2</button>
+                <button class="affBtn btn">3</button>
+                <button class="affBtn btn">-</button>
+                <button class="btn" id="square">x²</button>
+                <button class="affBtn btn">)</button>
+                <button class="btn" id="cos" class="trig">cos</button>
+            </div>
+            <div class="btnRow btnRow4">
+                <button class="affBtn btn">.</button>
+                <button class="affBtn btn">0</button>
+                <button class="affBtn btn">+</button>
+                <button id="AC" class="btn">AC</button>
+                <button class="btn" id="inv">1/x</button>
+                <button id="exp" class="btn">e</button>
+                <button class="btn" id="tan" class="trig">tan</button>
+            </div>
+            <div class="btnRow">
+                <button id="equal">=</button>
+                <button id="pi" class="btn">π</button>
+                <button class="btn" id="sqrt"></button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
